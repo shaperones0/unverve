@@ -33,5 +33,5 @@ def main(root_dirname: str):
 
 if __name__ == "__main__":
     import sys
-    root_dirname = "C:\\dev\\repo\\i-wanna-recompile\\source" #sys.argv[1]
+    root_dirname = sys.argv[1]
     main(root_dirname)
