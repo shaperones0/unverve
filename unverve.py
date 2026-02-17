@@ -7,7 +7,7 @@ def unverve_string(input: str) -> str:
         line_stripped = line.strip()
         if line_stripped and line_stripped.endswith(';') and not line_stripped.startswith('var'):
             result.append(line[:-1])
-        else:            
+        else:
             result.append(line)    # dont remove semicolon here
     return '\n'.join(result)    # keep it being LF
 
@@ -20,7 +20,7 @@ def main(root_dirname: str):
     objects_path = root_path / "objects"
     if not objects_path.exists():
         raise FileNotFoundError("Couldn't find objects folder in project")
-    
+
     for script_fname in itertools.chain(scripts_path.iterdir(), objects_path.iterdir()):
         print(f"File {script_fname} ...", end=" ")
         with script_fname.open() as fin:
@@ -29,7 +29,7 @@ def main(root_dirname: str):
         with script_fname.open('w') as fout:
             fout.write(content_unverved)
         print(f"written.")
-        
+
 
 if __name__ == "__main__":
     import sys
