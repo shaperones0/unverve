@@ -1,3 +1,3 @@
 # Unverve
 
-Simple script that removes redundant semicolons from scripts in gm82 project
+Simple script that removes redundant semicolons and spaces from scripts in gm82 project
