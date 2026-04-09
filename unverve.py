@@ -127,6 +127,8 @@ def main(root_dirname: str) -> None:
                 skip = 6
             if line.startswith('/*"/*\'/**//* YYD ACTION'):
                 skip = 5
+            if line.startswith('//field'):
+                skip = 1
 
             if skip:
                 skip -= 1
